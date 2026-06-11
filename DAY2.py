@@ -35,15 +35,55 @@
 
 
 #CHECKING FOR INEQUALITY
-requested_topping = 'mushrooms'
-if requested_topping != 'pepperoni':
-    print("Hold the pepperoni!")
+#requested_topping = 'mushrooms'
+#if requested_topping != 'pepperoni':
+#    print("Hold the pepperoni!")
 
 #EXAMPLE 2
-toppings = ['mushrooms', 'olives', 'pepperoni']
+#toppings = ['mushrooms', 'olives', 'pepperoni']
 
-for topping in toppings:
-    if topping != 'olives':
-        print("not olives")
-    else:
-        print('olives')
+#for topping in toppings:
+#    if topping != 'olives':
+#        print("not olives")
+#    else:
+#        print('olives')
+
+
+#CHECKING MULTIPLE CONDITIONS
+#single= True
+#age_1 = 18
+#if single and age_1 >= 21:
+#    print("You are 21 and not married when older.")
+#else:
+#    print("You are young enough.")
+
+
+#CHECKING WHETHER A VALUE IS IN A LIST
+#requested_toppings = ['mushrooms', 'onions', 'pineapple']
+#print('mushrooms' in requested_toppings)
+#print('pepperoni'  not in requested_toppings)
+
+
+#CHECKING WHETHER A VALUE IS NOT IN A LIST
+#banned_users = ['andrew', 'carolina', 'david']
+#user = 'david'
+#if user not in banned_users:
+#    print(f"{user.title()}, you can post a response if you wish.")
+#else:
+#    print(f"{user.title()}, you are banned from posting a response.")
+
+
+#BOOLEANS
+#A = 10
+#B = 20
+#print(A==B) # False
+
+#EXAMPLE 2
+var1 = 0
+var2 = 2
+var3 = -9.99
+var4 = ""
+print(bool(var1)) # False
+print(bool(var2)) # True
+print(bool(var3)) # True
+print(bool(var4)) # False
