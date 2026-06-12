@@ -79,11 +79,115 @@
 #print(A==B) # False
 
 #EXAMPLE 2
-var1 = 0
-var2 = 2
-var3 = -9.99
-var4 = ""
-print(bool(var1)) # False
-print(bool(var2)) # True
-print(bool(var3)) # True
-print(bool(var4)) # False
+# var1 = 0
+# var2 = 2
+# var3 = -9.99
+# var4 = ""
+# print(bool(var1)) # False
+# print(bool(var2)) # True
+# print(bool(var3)) # True
+# print(bool(var4)) # False
+
+
+#EVENING SESSION
+#CONTROL STRUCTURES
+#CONDITIONAL STATEMENTS
+
+# x = int (input("Enter a number: "))
+# if x > 0:
+#     print(" X is a Positive number")
+# elif x == 0:
+#     print(" X is Zero")
+# else:
+#     print(" X is a Negative number")
+    
+# GRADING SYSTEM
+# score = int(input("Enter your score: "))
+# if score >= 90:
+#         print("Grade: A")
+#         message = "Congratulations! You scored an A."
+# elif score >= 80:
+#         print("Grade: B")
+#         message = "Great job! You scored a B."
+# elif score >= 70:
+#         print("Grade: C")
+#         message = "Good effort! You scored a C."
+# elif score >= 60:
+#         print("Grade: D")
+#         message = "You passed! You scored a D."
+# else:
+#         print("Grade: F")
+#         message = "Sorry, you failed."
+# print(message)
+
+
+#SWITCH CASE STATEMENT
+# grade = input("Enter your grade (A, B, C, D, F): ")
+# match grade:
+#     case 'A':
+#         print("Grade: A")
+#         message = "Congratulations! You scored an A."
+#     case 'B':
+#         print("Grade: B")
+#         message = "Great job! You scored a B."
+#     case 'C':
+#         print("Grade: C")
+#         message = "Good effort! You scored a C."
+#     case 'D':
+#         print("Grade: D")
+#         message = "You passed! You scored a D."
+#     case 'F':
+#         print("Grade: F")
+#         message = "Sorry, you failed."
+#     case _:
+#         print("Invalid grade. Please enter a valid grade (A, B, C, D, F).")
+# print(message)
+
+#Exe 1
+# day = int(input("Enter a number for a day: "))
+# match day:
+#     case 1:
+#         print("Monday")
+#     case 2:
+#         print("Tuesday")
+#     case 3:
+#         print("Wednesday")
+#     case 4:
+#         print("Thursday")
+#     case 5:
+#         print("Friday")
+#     case 6:
+#         print("Saturday")
+#     case 7:
+#         print("Sunday")
+#     case _:
+#         print("Invalid input. Please enter a number between 1 and 7.")
+
+#NESTED IF STATEMENT
+users = {
+    "user1": {"username": "john_doe", "password": "password123", "role": "admin"},
+    "user2": {"username": "jane_smith", "password": "securepass456", "role": "user"},
+}
+
+# if "username" in users["user1"] and "password" in users["user1"]:
+#     if users["user1"]["username"] == "john_doe" and users["user1"]["password"] == "password123":
+#         print("Login successful! Welcome, admin.")
+#     else:
+#         print("Invalid username or password for user1.")
+
+# username = input("Enter your username: ")
+# password = input("Enter your password: ")
+
+# if user in users:
+#     if users[user]["username"] == username and users[user]["password"] == password:
+#         print(f"Login successful! Welcome, {users[user]['role']}.")
+#     else:
+#         print("Invalid username or password.")
+
+#         if users[user]["role"] == "admin":
+#             print("You have admin privileges.")
+#         else:
+#             print("You have user privileges.")
+
+
+#Login authentication system
