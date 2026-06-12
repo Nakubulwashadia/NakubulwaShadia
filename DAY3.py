@@ -121,6 +121,62 @@
 #      print
 
 #exercise 2
-books = ["The Alchemist", "The Power of Now", "The Monk Who Sold His Ferrari", "The 5 Love Languages"]
-for book in books:
-    print(f"I like {book}")
+# books = ["The Alchemist", "The Power of Now", "The Monk Who Sold His Ferrari", "The 5 Love Languages"]
+# for book in books:
+#     print(f"I like {book}")
+
+#Activity 3
+# fruits = ["mangoes", "oranges", "bananas", "grapes"]
+# for fruit in fruits:
+#     print (f"I like {fruit}")
+
+#WHILE LOOPS
+# A program to demonstarte bank aaccount balance
+balance = 1000
+# while balance > 0:
+#     print(f"Current balance: {balance}")
+#     amount = float(input("Enter withdrawal amount: "))
+#     if amount <= balance:
+#         balance -= amount
+#     else:
+#         print("Insufficient funds!")
+# print("Account balance is zero.")
+
+
+#NESTED LOOPS
+# for i in range(1, 4):
+#     for j in range(1, 4):
+#         print(f"Outer loop iteration {i}, Inner loop iteration {j}")
+
+#PATTERN PRINTING
+# for i in range(1, 6):
+#     for j in range(1, i + 1):
+#         print("*", end=" ")
+#     print()
+
+# Exe 4. Pattern of numbers
+# for i in range(1, 6):
+#     for j in range(1, i + 1):
+#         print(j, end=" ")
+#     print()
+
+
+#LOOOP CONTROL STATEMENTS
+# for i in range(1, 11):
+#     if i == 5:
+#         print("Breaking the loop at i =", i)
+#         break  # Exit the loop when i is 5
+#     print(i)
+
+#CONTINUE STATEMENT
+# for i in range(1, 11):
+#     if i == 5:
+#         print("Skipping the iteration at i =", i)
+#         continue  # Skip the rest of the loop when i is 5
+#     print(i)
+
+#PASS STATEMENT
+# for i in range(1, 11):
+#     if i == 5:
+#         pass  # Do nothing when i is 5
+#     print(i)
