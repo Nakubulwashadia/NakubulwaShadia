@@ -8,14 +8,14 @@
 #support fast search
 
 #example of a set
-# cars = ('suzuki', 'honda', 'subaru')
+# cars = {'suzuki', 'honda', 'subaru'}
 # print(cars)
 # print(type(cars))
 
 #data uniqueness
-# Name = {'shanita', 'Ketra', 'Sania', 10, 23, 34}
-# print(Name)
-# print(type(Name))
+Name = {'shanita', 'Ketra', 'Sania', 10, 23, 34}
+print(Name)
+print(type(Name))
 
 #data duplication
 # letters = {"a", "b", "c", "c", "a", "a"}
