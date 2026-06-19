@@ -13,9 +13,9 @@
 # print(type(cars))
 
 #data uniqueness
-Name = {'shanita', 'Ketra', 'Sania', 10, 23, 34}
-print(Name)
-print(type(Name))
+# Name = {'shanita', 'Ketra', 'Sania', 10, 23, 34}
+# print(Name)
+# print(type(Name))
 
 #data duplication
 # letters = {"a", "b", "c", "c", "a", "a"}
@@ -166,13 +166,13 @@ print(type(Name))
 # square_number()
 
 #exercise 1: write a function that takes in input and calculate the area of a rectangle
-# def rectangle_area(length,width):
+# def rectangle_area():
 #     length = float(input("Enter length: "))
-#     width = float(input("enter width: "))                             #some error correct
+#     width = float(input("enter width: "))                             
 #     area = length * width
 #     print(area)
 
-# rectangle_area(length, width)
+# rectangle_area()
 
 #parameter and argument
 # def greet user(name):
@@ -225,21 +225,20 @@ print(type(Name))
 
 
 #default parameter
-def display(name, age=24):
-    print(name)
-    print(age)
+# def display(name, age=24):
+#     print(name)
+#     print(age)
 
-display('Kana')
+# display('Kana')
 
 #return statements
 #sends a value back to the caller
 # print()the value cannot be reused easily, return() code can be reused easily
-def add(a,b):
-    return a * b
+def add(a, b):
+    return a + b
 
-result = add(5*10)
-print(result)
-
+result = add(5, 10)
+print(result)  # 15
 #multiple return statement
 
 #variable scope and the types
