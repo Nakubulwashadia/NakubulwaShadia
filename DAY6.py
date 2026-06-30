@@ -33,19 +33,28 @@
 # print(student1.age)
 
 #exercise
-# class Book:
-#     title = 'Bible'
-#     Author = 'Multiple'
+class Book:
 
-#     def __init__(self,volume,price):
-#         self.volume=volume
-#         self.price=price
+#class variables
+    title = 'Bible'
+    Author = 'Multiple'
+    num_book = 0
 
-# book1 = Book(2,240000)
+    def __init__(self,volume,price):
 
-# print('Book volume: ',book1.volume)
-# print('Book price: ',book1.price)
+#instance variables
+        self.volume=volume
+        self.price=price
+        Book.num_book += 1
 
+book1 = Book(2,240000)
+book2 = Book(3,300000)
+
+print('Book title: ',Book.title)  #class variables are accessed through the class name
+print('Book Author: ',Book.Author)
+print('Book volume: ',book1.volume)  #instance variables are accessed through the instance name
+print('Book price: ',book1.price)
+print('Total books: ',Book.num_book)
 
 # class Restaurant:
 #     def __init__(self,restaurant_name,cuisine_type):

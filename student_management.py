@@ -203,6 +203,40 @@ def delete_student():
         logging.error(f"Error deleting student: {e}")
         print("Error:", e)
 
+def generate_report():
+    try:
+        print("\n--- Student Report ---")
+
+        total_students = 0
+        ages = []
+
+        with open(CSV_FILE, 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # skip header
+
+            for row in reader:
+                total_students += 1
+                ages.append(int(row[2]))
+
+        if total_students == 0:
+            print("No student data available.")
+            return
+
+        avg_age = sum(ages) / len(ages)
+        max_age = max(ages)
+        min_age = min(ages)
+
+        print(f"Total Students: {total_students}")
+        print(f"Average Age: {avg_age:.2f}")
+        print(f"Youngest Student Age: {min_age}")
+        print(f"Oldest Student Age: {max_age}")
+
+        logging.info("Generated student report")
+
+    except Exception as e:
+        logging.error(f"Error generating report: {e}")
+        print("Error:", e)
+
 
 # -------------------- Menu --------------------
 def menu():
@@ -215,9 +249,10 @@ def menu():
         print("3. Search Student")
         print("4. Update Student")
         print("5. Delete Student")
-        print("6. Exit")
+        print("6. Generate Report")
+        print("7. Exit")
 
-        choice = input("Enter choice: ")
+        choice = input("Enter choice: ").strip()
 
         if choice == '1':
             add_student()
@@ -230,6 +265,8 @@ def menu():
         elif choice == '5':
             delete_student()
         elif choice == '6':
+            generate_report()
+        elif choice == '7':
             print("Exiting...")
             break
         else:
@@ -238,3 +275,4 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+print("PROGRAM STOPPED")
