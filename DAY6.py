@@ -33,28 +33,28 @@
 # print(student1.age)
 
 #exercise
-class Book:
+# class Book:
 
-#class variables
-    title = 'Bible'
-    Author = 'Multiple'
-    num_book = 0
+# #class variables
+#     title = 'Bible'
+#     Author = 'Multiple'
+#     num_book = 0
 
-    def __init__(self,volume,price):
+#     def __init__(self,volume,price):
 
-#instance variables
-        self.volume=volume
-        self.price=price
-        Book.num_book += 1
+# #instance variables
+#         self.volume=volume
+#         self.price=price
+#         Book.num_book += 1
 
-book1 = Book(2,240000)
-book2 = Book(3,300000)
+# book1 = Book(2,240000)
+# book2 = Book(3,300000)
 
-print('Book title: ',Book.title)  #class variables are accessed through the class name
-print('Book Author: ',Book.Author)
-print('Book volume: ',book1.volume)  #instance variables are accessed through the instance name
-print('Book price: ',book1.price)
-print('Total books: ',Book.num_book)
+# print('Book title: ',Book.title)  #class variables are accessed through the class name
+# print('Book Author: ',Book.Author)
+# print('Book volume: ',book1.volume)  #instance variables are accessed through the instance name
+# print('Book price: ',book1.price)
+# print('Total books: ',Book.num_book)
 
 # class Restaurant:
 #     def __init__(self,restaurant_name,cuisine_type):
@@ -175,15 +175,35 @@ print('Total books: ',Book.num_book)
 # class Vehicle(ABC):
 #     @abstractmethod
 #     def start(self):
-#         print('Car started')
+#         pass
+
 #     @abstractmethod
 #     def stop(self):
-#          print('car stopped')
+#         pass
 
-# car = Vehicle()
+# class Car(Vehicle):
+#     def start(self):
+#         print('You can start this car!')
 
+#     def stop(self):
+#         print ('You can stop this car!')
+
+# class Motorcycle(Vehicle):
+#     def start(self):
+#         print('You start a motorcycle.')
+
+#     def stop(self):
+#         print('You stop a motocycle.')
+
+
+# car = Car()
 # car.start()
 # car.stop()
+
+# m = Motorcycle()
+# m.start()
+# m.stop()
+
 
 #inheritance
 #what is inheritance? 

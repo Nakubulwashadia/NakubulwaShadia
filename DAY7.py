@@ -85,7 +85,7 @@
 #     pass
 # obj = D()
 # obj.w()
-# print(D.__mro__)
+#print(D.__mro__)
 
 
 #EVENING SESSION
@@ -169,6 +169,78 @@ class CurrentAccount(BankAccount):
 # The parent class must be transaction and the child class can be deposit, withdrawal and transfer.
 #Demonstrate an employer depositing, withdrawing and transferring funds.
 
+# Parent Class
+# Parent Class
+class Transaction:
+    def __init__(self, balance=0):
+        self.balance = balance
+
+    def process(self, amount):
+        print("Processing a generic transaction...")
+
+    def show_balance(self):
+        print("Current Balance:", self.balance)
+
+
+# Child Class: Deposit
+class Deposit(Transaction):
+
+    # Method Overriding + simulated overloading
+    def process(self, amount, bonus=0):
+        total = amount + bonus
+        self.balance += total
+        print(f"Deposited {amount} with bonus {bonus}")
+
+
+# Child Class: Withdrawal
+class Withdrawal(Transaction):
+
+    def process(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew {amount}")
+        else:
+            print("Insufficient funds!")
+
+
+# Child Class: Transfer
+class Transfer(Transaction):
+
+    def process(self, amount, target_account):
+        if amount <= self.balance:
+            self.balance -= amount
+            target_account.balance += amount
+            print(f"Transferred {amount} to another account")
+        else:
+            print("Insufficient funds for transfer!")
+
+
+# =========================
+# TESTING 
+# =========================
+
+# Create accounts
+account1 = Deposit(1000)   # Employer account
+account2 = Deposit(500)    # Another account
+
+# Deposit
+account1.process(200, 50)   # deposit with bonus
+account1.show_balance()
+
+# Withdraw
+withdraw = Withdrawal(account1.balance)
+withdraw.process(300)
+withdraw.show_balance()
+
+# Transfer
+transfer = Transfer(withdraw.balance)
+transfer.process(200, account2)
+
+print("\nFinal Balances:")
+transfer.show_balance()
+account2.show_balance()
+
+
 # Operator overloading 
 '''
 - Add +, subtract -, Multiply *, division /
@@ -213,33 +285,33 @@ openpyxl - Excel file read / write
 #Get the file path downloads
 #file path
 #Approach : pathlib
-from pathlib import Path
-file_path = Path.home() / "Downloads" / "report.pdf"
+# from pathlib import Path
+# file_path = Path.home() / "Downloads" / "report.pdf"
 
 
-#File organisation script
-# real world we can automatically organised a download folder by file type
+# #File organisation script
+# # real world we can automatically organised a download folder by file type
 
-#Import libraries
-from pathlib import Path
-import shutil
-from datetime import datetime
-from dataclasses import dataclass
+# #Import libraries
+# from pathlib import Path
+# import shutil
+# from datetime import datetime
+# from dataclasses import dataclass
 
-#-- Configuration
-@dataclass(frozen=True)
-class Config:
-    source_dir: Path
-    destination_dir: Path
-    dry_run: bool = True
+# #-- Configuration
+# @dataclass(frozen=True)
+# class Config:
+#     source_dir: Path
+#     destination_dir: Path
+#     dry_run: bool = True
 
-EXTENSION_MAP = {
-    'Images': [".jpg", "jpeg", ".png", ".svg"],
-    'Documents': [".pdf", ".docx", ".txt"],
-    'Videos': [".mp4", ".mkv", "mov"],
-    'Code': [".py", ".js", ".html"],
-    'Archives': [".zip", ".tar", ".gz"],
-}
+# EXTENSION_MAP = {
+#     'Images': [".jpg", "jpeg", ".png", ".svg"],
+#     'Documents': [".pdf", ".docx", ".txt"],
+#     'Videos': [".mp4", ".mkv", "mov"],
+#     'Code': [".py", ".js", ".html"],
+#     'Archives': [".zip", ".tar", ".gz"],
+# }
 
 #Assignment
 #code logic for file automation
